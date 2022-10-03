@@ -14,6 +14,36 @@ func TestGenesis(t *testing.T) {
 	genesisState := types.GenesisState{
 		Params: types.DefaultParams(),
 
+		SystemInfo: &types.SystemInfo{
+		NextId: 20,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 47,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 53,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 96,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 72,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 76,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 34,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 58,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 10,
+},
+		SystemInfo: &types.SystemInfo{
+		NextId: 82,
+},
 		// this line is used by starport scaffolding # genesis/test/state
 	}
 
@@ -25,5 +55,15 @@ func TestGenesis(t *testing.T) {
 	nullify.Fill(&genesisState)
 	nullify.Fill(got)
 
-	// this line is used by starport scaffolding # genesis/test/assert
+	require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+require.Equal(t, genesisState.SystemInfo, got.SystemInfo)
+// this line is used by starport scaffolding # genesis/test/assert
 }

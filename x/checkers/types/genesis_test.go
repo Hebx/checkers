@@ -22,7 +22,37 @@ func TestGenesisState_Validate(t *testing.T) {
 			desc:     "valid genesis state",
 			genState: &types.GenesisState{
 
-				// this line is used by starport scaffolding # types/genesis/validField
+				SystemInfo: &types.SystemInfo{
+		NextId: 4,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 27,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 19,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 30,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 3,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 12,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 31,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 83,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 43,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 42,
+},
+// this line is used by starport scaffolding # types/genesis/validField
 			},
 			valid: true,
 		},
