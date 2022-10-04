@@ -49,6 +49,18 @@ if genState.SystemInfo != nil {
 if genState.SystemInfo != nil {
 	k.SetSystemInfo(ctx, *genState.SystemInfo)
 }
+// Set if defined
+if genState.SystemInfo != nil {
+	k.SetSystemInfo(ctx, *genState.SystemInfo)
+}
+// Set if defined
+if genState.SystemInfo != nil {
+	k.SetSystemInfo(ctx, *genState.SystemInfo)
+}
+// Set all the storedGame
+for _, elem := range genState.StoredGameList {
+	k.SetStoredGame(ctx, elem)
+}
 // this line is used by starport scaffolding # genesis/module/init
 	k.SetParams(ctx, genState.Params)
 }
@@ -108,6 +120,17 @@ systemInfo, found := k.GetSystemInfo(ctx)
 if found {
 	genesis.SystemInfo = &systemInfo
 }
+// Get all systemInfo
+systemInfo, found := k.GetSystemInfo(ctx)
+if found {
+	genesis.SystemInfo = &systemInfo
+}
+// Get all systemInfo
+systemInfo, found := k.GetSystemInfo(ctx)
+if found {
+	genesis.SystemInfo = &systemInfo
+}
+genesis.StoredGameList = k.GetAllStoredGame(ctx)
 // this line is used by starport scaffolding # genesis/module/export
 
 	return genesis

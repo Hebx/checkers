@@ -52,11 +52,39 @@ SystemInfo: &types.SystemInfo{
 SystemInfo: &types.SystemInfo{
 		NextId: 42,
 },
+SystemInfo: &types.SystemInfo{
+		NextId: 49,
+},
+SystemInfo: &types.SystemInfo{
+		NextId: 51,
+},
+StoredGameList: []types.StoredGame{
+	{
+		Index: "0",
+},
+	{
+		Index: "1",
+},
+},
 // this line is used by starport scaffolding # types/genesis/validField
 			},
 			valid: true,
 		},
-		// this line is used by starport scaffolding # types/genesis/testcase
+		{
+	desc:     "duplicated storedGame",
+	genState: &types.GenesisState{
+		StoredGameList: []types.StoredGame{
+			{
+				Index: "0",
+},
+			{
+				Index: "0",
+},
+		},
+	},
+	valid:    false,
+},
+// this line is used by starport scaffolding # types/genesis/testcase
 	} {
 		t.Run(tc.desc, func(t *testing.T) {
 			err := tc.genState.Validate()
